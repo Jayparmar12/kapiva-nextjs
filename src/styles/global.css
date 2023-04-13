@@ -1,0 +1,1011 @@
+@tailwind base;
+
+
+@tailwind components;
+
+@tailwind utilities;
+
+a{
+  @apply hover:border-none text-black hover:text-[#708c34];
+}
+
+section {
+	@apply block;
+}
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+[data-dummy] {
+	@apply border-b-2 border-blue-300;
+	@apply flex justify-center items-center;
+}
+:root {
+  /* css variables for fonts */
+  --text-xs:8px;
+  --text-2xs: 10px;
+  --text-sm: 12px;
+  --text-2sm: 14px;
+  --text-md: 16px;
+	--text-base: var(--text-md);
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
+  --heading-sm: 24px;
+  --heading-md: 30px;
+  --heading-lg: 36px;
+  --heading-xl: 42px;
+  --heading-2xl: 71px;
+  --heading-3xl:108px;
+
+  /* css variables for font in pdp */
+  --pdp-text-xs:8px;
+  --pdp-text-2xs:10px;
+  --pdp-text-sm:12px;
+  --pdp-text-2sm:14px;
+  --pdp-text-base:16px;
+  --pdp-text-lg:18px;
+  --pdp-text-xl:20px;
+  --pdp-text-2xl:22px;
+  --pdp-heading-xs:24px;
+  --pdp-heading-2xs:26px;
+  --pdp-heading-sm:28px;
+  --pdp-heading-2sm:30px;
+  --pdp-heading-base:32px;
+  --pdp-heading-lg:34px;
+  --pdp-heading-2lg:36px;
+  --pdp-heading-3lg:40px;
+  --pdp-heading-xl:42px;
+  --pdp-heading-2xl:44px;
+  --pdp-heading-3xl:56px;
+
+  /* margin variables for recommended products section */
+  --left-margin-lg:20px;
+  --left-margin-xl:30px;
+  --left-margin-2xl:50px;
+
+  /* variables for colors cr stands for color */
+--cr-black:#000000;
+--cr-dark:#333333;
+--cr-info-dark:#1A4039;
+--cr-info:#48847B;
+--cr-info-light:#A3C8C2;
+--cr-primary-light-dark:#ADBE88;
+--cr-primary-dark:#59702F;
+--cr-primary-lightest:#ccffcc;
+--cr-primary-ligter:#99B949;
+--cr-primary-light:#7EAA2F;
+--cr-primary:#80A03C;
+--cr-primary-o4:#80A03C0D;
+--cr-primary-o3:#80A03C1D;
+--cr-primary-o2:#80A03C26;
+--cr-primary-o1:#80A03C8B;
+--cr-secondary:#868686;
+--cr-secondary-light:#B9B9B9;
+--cr-secondary-lighter:#606060;
+--cr-danger:#B26442;
+--cr-danger-light:#C97B5A;
+--cr-danger-lighter:#CC8364;
+--cr-danger-lightest:#D08E71;
+--cr-warning:#EDED7E;
+--cr-light-4:#EDEDED;
+--cr-light-3:#F2F1EB;
+--cr-light-2:#FFF5F1;
+--cr-light:#FFFBF6;
+--cr-white:#FFFFFF;
+
+}
+
+/* applied font-jost as default for all  texts */
+body{
+  @apply bg-white font-jost leading-[1.4];
+}
+
+
+/*for removing arrows from input symbol */
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.kp-provide-margin-for-p  p{
+	margin-bottom:24px;
+}
+
+.kp-add-margin-first-element:nth-of-type(1){
+	margin-top:30px;
+}
+
+.kp-remove-bottom-margin:nth-last-child(1) {
+  margin-bottom:0;
+}
+
+.kp-remove-last:nth-last-of-type(1){
+@apply hidden;
+}
+
+.glider-dot{
+  border:1px solid black !important;
+  background:white !important;
+  height:7px !important;
+  width:7px !important;
+}
+
+.glider-dot.active{
+  background:black !important;
+}
+
+/* .glider-prev,
+.glider-next {
+  display: none;
+} */
+
+/* setting up glider dot min-size for desktops */
+@media only screen and (min-width:1024px){
+  .glider-dot{
+    height:9px !important;
+    width:9px !important;
+  }
+  /* START: modifying the dots in pdp page */
+  .pdp-glider-dot .glider-dot{
+    height:13px !important;
+    width:13px !important;
+    margin:30px 10px 0 0 !important;
+  }
+
+  /* END: modifying the sizes of arrows and dots in pdp page */
+
+/* hiding arrow based on viewport size, for now hide on screens resolution less than 1024px */
+  .glider-prev,
+  .glider-next {
+    display: block;
+  }
+}
+
+/* @font-face{
+  font-family:play-regular; src: url(../../public/assets/font/PlayfairDisplay-Regular.otf); 
+  font-display: swap;
+} */
+
+
+.kp-add-left-margin-to-left-slide:nth-of-type(1){
+  margin-left:50px;
+}
+
+
+/* .kp-container{
+  padding:0 0.5rem;
+  @apply mx-auto;
+}
+@media only screen and (min-width:768px){
+  .kp-container{
+    padding:0 2rem;
+  }
+}
+@media only screen and (min-width:1024px){
+  .kp-container{
+    padding:0 5rem;
+  }
+}
+@media only screen and (min-width:1900px){
+  .kp-container{
+    max-width:1900px;
+  }
+} */
+
+/* version 2 of kp-container  */
+.kp-container,.sciencebehindsection .container{
+  margin-left:auto;
+  margin-right:auto;
+  padding:0 20px;
+  width:100%;
+}
+@media only screen and (min-width:1024px){
+  .kp-container,.sciencebehindsection .container{
+    max-width:960px;
+  }
+}
+@media only screen and (min-width:1200px){
+  .kp-container,.sciencebehindsection .container{
+    max-width: 1120px;
+  }
+}
+@media only screen and (min-width:1366px){
+  .kp-container,.sciencebehindsection .container{
+    max-width:1240px;
+  }
+}
+@media only screen and (min-width:1700px){
+    .kp-container,.sciencebehindsection .container{
+      max-width:1660px;
+    }
+}
+@media only screen and (min-width:1900px){
+  .kp-container,.sciencebehindsection .container{
+    max-width:1760px;
+  }
+}
+
+.kp-container-fluid{
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right:20px;
+  padding-left: 20px;
+}
+.kp-remove-right-margin:nth-last-of-type(1){
+margin-right:0px !important;
+}
+
+
+/* for hiding the scrollbar but slider should still work*/
+.glider::-webkit-scrollbar{
+  display:none;
+}
+
+.glider {
+  -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  -ms-overflow-style: none !important;
+}
+
+/* for floating even cointainer to the right for why Kapiva section */
+.kp-direction-flow:nth-child(even){
+  direction:rtl;
+}
+.kp-text-direction{
+direction:ltr;
+}
+.kp-subscribe-bg{
+  background:linear-gradient(180deg, #0000008B 0%, #3F3F3F79 35%, #77767636 100%);
+}
+
+/* for styling dots of banner in homepage  */
+.kp-banner  .glider-dots {
+  position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.kp-banner  .glider-dots .glider-dot{
+  color:yellow;
+  border:1px solid white !important;
+  background:transparent !important;
+}
+
+.kp-banner .glider-dots .glider-dot.active{
+  background:white !important;
+
+}
+
+/* for homepage section titles  */
+.kp-home-section-title{
+  font-size: clamp(1.5rem, 0.9737rem + 2.1053vw, 3.5rem);
+  @apply leading-[1.02] lg:leading-[1.07];
+}
+
+/* for pdp section titles and also handling the font size for science behind section */
+.kp-pdp-section-title,.sciencebehindsection .heading-homepage{
+@apply font-light text-[length:var(--pdp-text-lg)] text-[color:var(--cr-dark)] uppercase leading-[1.1] md:text-[length:var(--pdp-heading-sm)] lg:text-[length:var(--pdp-heading-3lg)]; 
+}
+@media screen and (min-width:1366px) {
+.kp-pdp-section-title,.sciencebehindsection .heading-homepage{
+  @apply text-[length:var(--pdp-heading-3xl)];
+}
+}
+.sciencebehindsection .heading-homepage{
+  @apply text-center  mt-[30px] mb-[25px] lg:my-12;
+}
+.sciencebehindsection .heading-homepage span{
+  @apply block font-black;
+}
+
+.loadingCard:before{
+  content: '';
+    background: #eee;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(110deg,#e7efd7 8%,#fff 18%,#e7efd7 33%);
+    background-size: 200% 100%;
+    animation: 2s shines linear infinite;
+    z-index: 2;
+}
+
+@keyframes shines{
+  to{
+      background-position-x:-200%
+  }
+}
+
+.kp-animate-left{
+visibility: visible; 
+animation-iteration-count:1;
+animation-name: fadeInLeft; 
+animation-duration:1s;
+}
+
+@keyframes fadeInLeft{
+0% {
+    -webkit-transform: translate3d(100%,0,0);
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+}
+
+100% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
+}
+}
+
+/* for hiding arrow on mobile device but show in desktop ,here we are assuming that last div element contains arrow ,might change in future  */
+.kp-hide-arrow-mobile > div:last-child{
+@apply hidden lg:block ;
+}
+
+.kp-hide-dots-mobile .glider-dots {
+@apply hidden lg:flex ;
+}
+/* hiding dots when the number of items in glider is less than the required one*/
+.hide-dots .glider-dots{
+display:none;
+}
+
+/* for clamping the line up-to-max of two lines */
+.kp-show-2line{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp:2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* for clamping the line up-to-max of 3 lines */
+.kp-show-3line{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp:3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* decreasing the size of glider dots for topGlider */
+.kp-topGlider ~ .glider-dots{
+  align-items: center !important;
+}
+.kp-topGlider ~ .glider-dots > .glider-dot{
+  height: 2px !important;
+  width: 2px !important;
+  margin:auto 2px;
+  border-radius: 50%;
+  border:1px solid #333;
+}
+.kp-topGlider ~ .glider-dots > .glider-dot.active{
+ border:1px solid #80a03c !important;
+ height: 3px !important;
+ width: 3px !important;
+ background-color: #80a03c !important;
+}
+
+/* hide dots in desktops with sizes > 1024px */
+@media only screen and (min-width:1024px){
+  .kp-topGlider ~ .glider-dots{
+    display: none;
+  }
+}
+/* for managing the max-width of the items in mini-cart for desktop screens */
+/* since we need to provide left margin to the first slider element which needs to be aligned with outside elements */
+.kp-manage-max-width{
+  @apply lg:max-w-[calc(100%-calc(2*var(--left-margin-lg)))] xl:max-w-[calc(100%-calc(2*var(--left-margin-xl)))] 2xl:max-w-[calc(100%-calc(2*var(--left-margin-2xl)))];
+}
+
+.kp-recommended-margins{
+@apply relative !min-w-[160px] max-w-[160px] w-[160px] lg:!min-w-[270px] lg:max-w-[270px] lg:w-[270px] last:after:absolute last:after:left-full last:after:top-0 last:after:h-full last:after:content-[''] last:after:block;
+@apply first:ml-5 last:after:w-[20px] lg:first:ml-[length:var(--left-margin-lg)] lg:last:after:w-[length:var(--left-margin-lg)] xl:first:ml-[length:var(--left-margin-xl)] xl:last:after:w-[length:var(--left-margin-xl)] 2xl:first:ml-[length:var(--left-margin-2xl)] 2xl:last:after:w-[length:var(--left-margin-2xl)];
+}
+
+/* setting up equal height for the find right solution */
+@media only screen and (max-width:396px){
+    .kp-equal-height{
+      @apply h-[48px] leading-[1.25];
+    }
+}
+
+/* box-shadow for news card elements */
+.kp-green-shadow{
+  box-shadow:2px 2px 4px #80A03C58
+}
+@media only screen and (min-width:1024px){
+  .kp-green-shadow{
+    box-shadow:2px 2px 8px #80A03C58
+  }
+}
+
+/* for preserving the products width in smaller devices(<320px) for product slider */
+@media only screen and (max-width:319px){
+  .kp-products-small{
+    min-width: 175px !important;
+  }
+}
+
+/* for managing product card styles in smaller screens (<375px)  */
+@media only screen and (max-width:374px){
+ .kp-mobile-bottom{
+  @apply bottom-2 top-auto; 
+ }
+}
+
+/* modifying default judgme widget */
+/* review widget homepage */
+.jdgm-preview-badge {
+@apply !float-none !w-full !m-0 !border-0;
+}
+.kp-review-small{
+@apply !flex !items-start;
+}
+.kp-review-small .jdgm-prev-badge__stars{
+@apply !text-[0px]
+}
+.kp-review-small .jdgm-star{
+@apply !hidden m-0;
+}
+.kp-review-small .jdgm-star:first-of-type{
+@apply !inline;
+}
+.kp-review-small .jdgm-star::before{
+@apply !text-[9px] lg:!text-[14px] !mr-[-2px] lg:!mr-0;
+}
+.kp-review-small .jdgm-prev-badge__text{
+@apply !font-normal !text-[length:var(--text-sm)] lg:!text-[length:var(--text-base)] lg:!tracking-[0.64px];
+}
+.kp-review-small > .jdgm-prev-badge {
+  @apply !hidden;
+}
+.kp-review-small > .jdgm-prev-badge:nth-of-type(1)
+{
+@apply !flex !items-center;
+}
+/* preview badge pdp  */
+.kp-pdp-preview-badge.kp-review-small .jdgm-star::before{
+  @apply !text-[11px] lg:!text-[14px] lg:tracking-normal !mr-[2px] lg:!mr-1;
+  }
+.kp-pdp-preview-badge.kp-review-small .jdgm-prev-badge__text{
+  @apply !font-semibold lg:!font-normal !text-[length:var(--text-sm)] lg:!text-[length:var(--text-base)] !tracking-[0.48px] lg:!tracking-[0.64px];
+}
+.kp-pdp-preview-badge.kp-review-small .jdgm-star{
+@apply !text-[#333] lg:!text-[#99b949];
+}
+.kp-review-small .jdgm-prev-badge[data-average-rating="0.00"]{
+  @apply !hidden;
+}
+/* for managing wrapping of quantity section in MiniCart */
+/* @media screen and (min-width:375px){ */
+  @media screen and (min-width:385px){
+  .kp-pos-13{
+    margin-left:auto;
+  }
+}
+
+@media screen and (min-width:1023px){
+  .kp-pos-13{
+    margin-left:0;
+  }
+}
+/* @media screen and (min-width:1300px){ */
+  @media screen and (min-width:1255px){
+  .kp-pos-13{
+    margin-left:auto;
+  }
+}
+
+/* these classes to be added when the jost is not loaded yet */
+.font-not-loaded-section-title{
+font-family: Arial;
+font-size: 11px;
+line-height: 1.2;
+letter-spacing: 0.35px;
+visibility: visible;
+font-weight: 600;
+word-spacing: 0px;
+}
+.font-not-loaded-category{
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  visibility: visible;
+  font-weight: 400;
+  word-spacing: -0.2px;
+}
+
+/* for applying gradients to banner images */
+.banner-bg-gradient::after{
+ @apply content-[''] absolute z-10 pointer-events-none w-full h-full bg-[linear-gradient(0deg,#00000085,#3f3f3f40,#77767600_25%)] left-0 top-0 lg:bg-[linear-gradient(0deg,#00000090,#3f3f3f40,#77767600_30%)];
+}
+
+/*
+ lg:bg-[linear-gradient(0deg,#000000CB_0%,#3F3F3F79_15%,#77767600_28%)];
+*/
+
+/* applying backdrop filter in cart background in desktop mode */
+.kp-backdrop{
+  backdrop-filter: blur(6px);
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+/* subscribe checkbox style for pdp page */
+.kp-checkbox-input{
+  position:relative;
+  height:0;
+  /* 
+  specifically applied for mozilla firefox 
+  */
+  width:20px;
+  -moz-appearance:initial;
+  /* end */
+}
+.kp-checkbox-input::before{
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  border-radius:6px;
+  background-color: #f2f1eb;
+  border: 1px solid #80a03c;
+}
+.kp-checkbox-input:checked::before{
+  content: "✔";
+  font-size: 10px;
+  line-height: 9px;
+  border-radius:6px;
+  color: #fff;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #80a03c;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (min-width:1024px){
+    .kp-checkbox-input::before,.kp-checkbox-input:checked::before{
+      top:-8px;
+  }
+}
+
+
+/* overriding default style for radio options pdp page */
+.kp-radio-label{
+position:relative;
+display:inline-block;
+padding-left: 30px;
+}
+.kp-radio-input{
+position:absolute;
+height:0;
+width:0;
+opacity:0;
+}
+.kp-radio-label::before,.kp-radio-label::after{
+  content: "";
+  display: block;
+  position: absolute;
+  border-width: 1px;
+  border-radius:100%;
+  top: 50%;
+  transform:translateY(-50%);
+  transition: all 50ms ease-out 0s;
+}
+.kp-radio-label::before{
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  left:0;
+  border-color: rgb(126, 170, 47);
+}
+.kp-radio-input:checked + .kp-radio-label::after{
+    width: 10px;
+    height: 10px;
+    left: 4px;
+    background: rgb(126, 170, 47);
+}
+
+
+/* for managing styles of pdp product-main-container gallery and info section */
+.kp-product-gallery{
+@apply mx-auto max-w-[95%] md:max-w-[85%] lg:mx-0 lg:w-[50%] lg:max-w-[50%] ;
+}
+.kp-product-info{
+  @apply flex flex-col max-w-[95%] md:w-full md:max-w-full md:text-left lg:w-[50%] lg:max-w-none lg:pl-[50px];
+}
+@media screen and (min-width:1200px) {
+  .kp-product-gallery{
+    @apply w-[580px];
+    }
+    .kp-product-info{
+      @apply w-[500px];
+    }
+}
+@media screen and (min-width:1366px) {
+    .kp-product-info{
+      @apply w-[615px];
+    }
+}
+@media screen and (min-width:1700px) {
+  .kp-product-gallery{
+    @apply w-[800px];
+    }
+  .kp-product-info{
+    @apply w-[760px] pl-0;
+  }
+}
+
+/* gradient for show more/less section  */
+.kp-showmoreless-gradient::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(54,77,46,.03) 50%,rgba(54,77,46,.09) 100%);
+}
+
+/* START: PDP JudgeMe Review Main Widget Style */
+.kp-review-main-widget .jdgm-rev-widg__title{
+  @apply uppercase font-black lg:text-[length:var(--pdp-heading-2sm)] text-[length:var(--pdp-heading-xs)] mb-2 mx-auto text-center;
+  
+}
+.kp-review-main-widget .jdgm-rev-widg{
+ @apply border !border-[color:rgba(128,160,60,0.75)] rounded-md;
+}
+.kp-review-main-widget .jdgm-widget-actions-wrapper > a{
+ @apply !rounded-md !border bg-[color:var(--cr-primary)] text-white font-semibold tracking-[1px] uppercase !px-[10px] !py-[11px] border-[color:var(--cr-primary)];
+}
+.kp-review-main-widget .jdgm-widget-actions-wrapper > a:nth-last-of-type(1){
+  @apply bg-transparent text-[color:var(--cr-dark)] border-[color:var(--cr-dark)];
+}
+.kp-review-main-widget .jdgm-widget-actions-wrapper > a:hover{
+  @apply !border-[1px]  !border-solid;
+}
+.kp-review-main-widget .jdgm-rev-widg__sort-wrapper{
+  @apply !float-right;
+}
+.kp-review-main-widget .jdgm-sort-dropdown{
+ @apply !rounded-md outline-none border cursor-pointer font-semibold tracking-[1px] text-white !bg-[color:var(--cr-primary)] uppercase !pl-[15px] !pr-[25px] !pt-[5px] !pb-[6px] border-solid !border-[color:var(--cr-primary)];
+}
+.kp-review-main-widget .jdgm-sort-dropdown-arrow{
+  @apply z-[1] !border-t-[6px] !border-t-white border-solid !right-[12px];
+ }
+ .kp-review-main-widget .jdgm-rev__timestamp{
+  @apply !my-[5px];
+ }
+ .kp-review-main-widget .jdgm-paginate__load-more{
+  @apply !rounded-md;
+}
+.kp-review-main-widget .jdgm-question-form input:not([type=submit]),.kp-review-main-widget .jdgm-question-form textarea,.kp-review-main-widget .jdgm-form input:not([type=submit]),.kp-review-main-widget .jdgm-form textarea{
+ @apply !outline-none !indent-[10px] !px-0 !py-[6px] !rounded-none !placeholder-gray-700;
+ }
+ .kp-review-main-widget .jdgm-question-form label{
+  @apply font-semibold text-[15px] ;
+  }
+  .kp-review-main-widget .jdgm-question-form input[type=submit],.kp-review-main-widget .jdgm-submit-rev{
+    @apply !px-[7px] !py-[11px] border border-[color:var(--cr-primary)] !rounded-md !cursor-pointer !text-white !bg-[color:var(--cr-primary)] text-[length:var(--pdp-text-2sm)];
+    }
+@media only screen and (min-width:376px) {
+  .kp-review-main-widget .jdgm-question-form input[type=submit]{
+    @apply !px-[15px] !py-[11px] !rounded-md text-[length:var(--pdp-text-base)];
+    }
+  }
+.kp-review-main-widget .jdgm-rev-widg__reviews .jdgm-rev{
+  @apply !bg-[color:var(--cr-white)] !rounded-md;
+  }
+.kp-review-main-widget  .jdgm-form__reviewer-name-format-container{
+@apply !hidden;
+}
+.kp-review-main-widget .jdgm-form .jdgm-input-error{
+  @apply !bg-[color:var(--cr-white)] !text-[color:var(--cr-danger)];
+}
+
+/* END: PDP JudgeMe Review Main Widget Style */
+
+/* START: SCIENCE BEHIND SECTION CSS  */
+.sciencebehindsection {
+  position: relative;
+}
+.sciencebehindsection .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sciencebehindsection .sciencebehindimage {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sciencebehindsection .sciencebehindimage {
+    position: absolute;
+    right: 0;
+    bottom: -7%;
+    display: block;
+    width: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .sciencebehindsection .sciencebehindimage {
+    width: 150px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindimage {
+    width: 280px;
+    bottom: -5%;
+  }
+}
+.sciencebehindsection .sciencebehindimagetop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sciencebehindsection .sciencebehindimagetop {
+    position: absolute;
+    left: 0;
+    top: -12%;
+    display: block;
+    width: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .sciencebehindimagetop {
+    width: 150px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindimagetop {
+    width: 205px;
+    top: -24%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sciencebehindsection .scicenceproductMain {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .scicenceproductMain {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1366px) {
+  .sciencebehindsection .scicenceproductMain {
+    width: 100%;
+    max-width: 1330px;
+  }
+}
+.sciencebehindsection .scicenceproductMain .row {
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+.sciencebehindsection .scicenceproductMain .row .col-lg {
+  width: 46%;
+  padding: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .sciencebehindsection .scicenceproductMain .row .col-lg {
+    width: 35%;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .scicenceproductMain .row .col-lg {
+    width: 420px;
+  }
+}
+.sciencebehindsection .scicenceproductMain .row .col-lg.compare {
+  width: auto;
+}
+.sciencebehindsection .compare {
+  width: 13px;
+}
+@media (min-width: 768px) {
+  .sciencebehindsection .compare {
+    width: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .compare {
+    width: 40px;
+  }
+}
+.sciencebehindsection .compare span {
+  font-size: 10.45px;
+  line-height: 40px;
+  color: #000;
+  font-weight: 900;
+  font-family: Jost;
+  text-transform: uppercase;
+  display: block;
+}
+@media (min-width: 768px) {
+  .sciencebehindsection .compare span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .compare span {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .compare span {
+    font-size: 25px;
+    line-height: 70px;
+  }
+}
+.sciencebehindsection .sciencebehindproduct {
+  font-family: Jost;
+}
+.sciencebehindsection .sciencebehindproduct h3,
+.sciencebehindsection .sciencebehindproduct p {
+  margin: 0;
+}
+.sciencebehindsection .sciencebehindproduct .producthead {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.sciencebehindsection .sciencebehindproduct .producthead .productheading {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 18.49px;
+  color: #e29d79;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid #e29d79;
+  padding: 0 0 10px 0;
+}
+@media (min-width: 768px) {
+  .sciencebehindsection .sciencebehindproduct .producthead .productheading {
+    font-size: 25px;
+    line-height: 23px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .sciencebehindproduct .producthead .productheading {
+    font-size: 32px;
+    padding: 0 15px 25px 25px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindproduct .producthead .productheading {
+    font-size: 43px;
+    letter-spacing: 4.31px;
+    line-height: 44px;
+  }
+}
+.sciencebehindsection .sciencebehindproduct .productbody {
+  padding: 0 25px;
+}
+@media (min-width: 1024px) {
+  .sciencebehindsection .sciencebehindproduct .productbody {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .sciencebehindproduct .productbody {
+    padding: 0 90px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindproduct .productbody {
+    padding: 0 50px;
+  }
+}
+.sciencebehindsection .sciencebehindproduct .commonheading {
+  font-size: 10px;
+  line-height: 10.49px;
+  color: #754749;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+}
+@media (min-width: 768px) {
+  .sciencebehindsection .sciencebehindproduct .commonheading {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .sciencebehindsection .sciencebehindproduct .commonheading {
+    font-size: 19px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindproduct .commonheading {
+    font-size: 24px;
+    line-height: 25px;
+    margin: 35px 0 0 0;
+  }
+}
+.sciencebehindsection .sciencebehindproduct .productimage {
+  margin: 20px 0 0 0;
+}
+@media (min-width: 1700px) {
+  .sciencebehindsection .sciencebehindproduct .productimage {
+    margin: 35px 0 0 0;
+  }
+}
+/* END: SCIENCE BEHIND SECTION CSS  */
+
+.kp-show-login-dropdown:hover > ul{
+@apply visible;
+}
+
+/* START PDP CUSTOMIZATIONS */
+.kp-description-style p:nth-of-type(1) span{
+background:white !important;
+color:rgba(66, 127, 44) !important;
+}
+/* END PDP CUSTOMIZATIONS */
+
+/* LOADER CONFIGURATIONS :START*/
+.loader1::after,.loader2::after,.loader3::before{
+  content: "";
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  position: absolute;
+  left: calc(50% - 0.75em);
+  top: calc(50% - 0.75em);
+  border: 0.15em solid transparent;
+  border-right-color: #070707;
+  border-radius: 50%;
+  animation: button-anim .7s linear infinite;
+  transform-origin:center;
+  opacity: 100;
+}
+.loader3::before{
+position:fixed;
+height:2em;
+width:2em;
+top:calc(50% - 1em);
+z-index:10; 
+}
+
+.loader2::after{
+  border-right-color: #fff;
+}
+@keyframes button-anim{
+  from {
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(360deg);
+  }
+}
+/* LOADER CONFIGURATIONS :END */

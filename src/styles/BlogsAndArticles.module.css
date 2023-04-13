@@ -1,0 +1,9 @@
+.blogTag{
+  font-size: clamp(0.6875rem, 0.6042rem + 0.3333vw, 1rem);
+}
+.blogTitle{
+  font-size: clamp(0.75rem, 0.55rem + 0.8vw, 1.5rem);
+}
+.blogSubTitle{
+  font-size: clamp(0.625rem, 0.525rem + 0.4vw, 1rem);
+}

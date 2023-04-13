@@ -1,0 +1,7 @@
+.infoTitle{
+  font-size: clamp(0.9375rem, 0.6908rem + 0.9868vw, 1.875rem);
+}
+
+.infoSubTitle{
+  font-size: clamp(0.75rem, 0.3929rem + 1.1429vw, 1.75rem);
+}

@@ -1,0 +1,8 @@
+.getHelpText
+{
+  font-size: clamp(0.75rem, 0.5526rem + 0.7895vw, 1.5rem);
+}
+
+.showAllButtonText{
+  font-size: clamp(0.75rem, 0.5197rem + 0.9211vw, 1.625rem);
+}

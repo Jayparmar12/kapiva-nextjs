@@ -1,0 +1,36 @@
+
+.kpCategoryTitle{
+  font-size: clamp(0.75rem, 0.55rem + 0.8vw, 1.5rem);
+}
+
+.kpSubCategoryTitle{
+  font-size: clamp(0.6875rem, 0.4708rem + 0.8667vw, 1.5rem);
+}
+
+.kpSubCategoryTitleActive{
+  font-size: clamp(0.75rem, 0.5167rem + 0.9333vw, 1.625rem);
+}
+
+.kpProductTitle{
+  font-size: clamp(0.875rem, 0.7083rem + 0.6667vw, 1.5rem);
+}
+
+.kpProductDescriptionTitle{
+  font-size: clamp(0.75rem, 0.6167rem + 0.5333vw, 1.25rem);
+}
+
+.kpProductSellingPriceTitle{
+  font-size: clamp(1.3125rem, 1.1625rem + 0.6vw, 1.875rem);
+}
+
+.kpProductCostPriceTitle{
+  font-size: clamp(0.9375rem, 0.7875rem + 0.6vw, 1.5rem);
+}
+
+.kpBuyNowTitle{
+  font-size: clamp(1rem, 0.8667rem + 0.5333vw, 1.5rem);
+}
+
+.kpProductBadgesTitle{
+  font-size: clamp(0.5rem, 0.3667rem + 0.5333vw, 1rem);
+}

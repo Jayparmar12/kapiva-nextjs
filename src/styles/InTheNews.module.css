@@ -1,0 +1,11 @@
+.kpInTheNewsTitleTop{
+  font-size: clamp(0.6875rem, 0.4042rem + 1.1333vw, 1.75rem);
+}
+
+.kpInTheNewsTitleBottom{
+  font-size: clamp(0.5rem, 0.2333rem + 1.0667vw, 1.5rem);
+}
+
+.kpNewsCardTitle{
+  font-size: clamp(0.6875rem, 0.5042rem + 0.7333vw, 1.375rem);
+}

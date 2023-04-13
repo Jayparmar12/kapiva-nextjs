@@ -1,0 +1,21 @@
+:root{
+  --pdp-text-xs:8px;
+  --pdp-text-2xs:10px;
+  --pdp-text-sm:12px;
+  --pdp-text-2sm:14px;
+  --pdp-text-base:16px;
+  --pdp-text-lg:18px;
+  --pdp-text-xl:20px;
+  --pdp-text-2xl:22px;
+  --pdp-heading-xs:24px;
+  --pdp-heading-2xs:26px;
+  --pdp-heading-sm:28px;
+  --pdp-heading-2sm:30px;
+  --pdp-heading-base:32px;
+  --pdp-heading-lg:34px;
+  --pdp-heading-2lg:36px;
+  --pdp-heading-3lg:40px;
+  --pdp-heading-xl:42px;
+  --pdp-heading-2xl:44px;
+  --pdp-heading-3xl:56px
+}

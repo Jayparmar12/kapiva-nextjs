@@ -1,0 +1,23 @@
+.kpUnlockTitle{
+  font-size: clamp(1.3125rem, 0.9625rem + 1.4vw, 2.625rem);
+}
+
+.kpLinkAndInfoText{
+   font-size: clamp(1.0625rem, 0.9967rem + 0.2632vw, 1.3125rem);
+   /* @apply text-[17px] lg:text-[21px]; */
+}
+
+.kpAddressText{
+  font-size: clamp(0.5rem, 0.4333rem + 0.2667vw, 0.75rem);
+}
+
+.kpContactText{
+  font-size: clamp(0.75rem, 0.6rem + 0.6vw, 1.3125rem);
+}
+
+.kpPartnersText{
+  font-size: clamp(0.625rem, 0.5417rem + 0.3333vw, 0.9375rem);
+}
+.kpSmallText{
+  font-size: clamp(0.5rem, 0.3833rem + 0.4667vw, 0.9375rem);
+  }

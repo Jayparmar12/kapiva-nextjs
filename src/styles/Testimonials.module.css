@@ -1,0 +1,7 @@
+.kpTestimonialsUserName{
+  font-size: clamp(0.625rem, 0.5083rem + 0.4667vw, 1.0625rem);
+}
+
+.kpTestimonialsUserComment{
+  font-size: clamp(0.5rem, 0.35rem + 0.6vw, 1.0625rem);
+}

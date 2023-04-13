@@ -1,0 +1,15 @@
+.kpSubHeading{
+  font-size: clamp(0.5rem, 0.2368rem + 1.0526vw, 1.5rem);
+}
+
+.kpWhyKapivaCardId{
+  font-size: clamp(4.4375rem, 3.8289rem + 2.4342vw, 6.75rem);
+}
+
+.kpWhyKapivaCardTitle{
+  font-size: clamp(1.0625rem, 0.8487rem + 0.8553vw, 1.875rem);
+}
+
+.kpWhyKapivaCardDescription{
+  font-size: clamp(0.75rem, 0.5526rem + 0.7895vw, 1.5rem);
+}
